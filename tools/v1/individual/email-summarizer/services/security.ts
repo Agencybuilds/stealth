@@ -54,6 +54,7 @@ export type EmailValidationResult =
 // Control characters (except tab, newline, carriage return) can corrupt
 // rendering or smuggle terminal escape sequences. They are replaced with a
 // single space rather than dropped so word boundaries survive.
+// eslint-disable-next-line no-control-regex
 const CONTROL_CHARS = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g;
 const HTML_TAG = /<[^>]*>/g;
 
